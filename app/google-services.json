@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "108985551030",
+    "project_id": "pushtest-310c0"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108985551030:android:9d3df5afebc23267",
+        "android_client_info": {
+          "package_name": "com.example.moizqureshi.pushtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARUL2TkX26mY2JbcLic78avcrVLeKn8k4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
