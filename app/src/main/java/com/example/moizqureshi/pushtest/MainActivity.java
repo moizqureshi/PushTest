@@ -1,5 +1,6 @@
 package com.example.moizqureshi.pushtest;
 
+import android.app.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 
@@ -27,18 +26,20 @@ import org.json.JSONException;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     String myEmail;
     String partnerEmail;
     String partnerID;
     String msg;
 
-
+    protected myApplication app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        app = (myApplication)getApplication();
 
         final EditText msgTxt = (EditText)findViewById(R.id.msgText);
         final EditText searchEmailTxt = (EditText)findViewById(R.id.searchEmailText);
@@ -53,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
                 .setAutoPromptLocation(true)
                 .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
                 .init();
-        OneSignal.enableInAppAlertNotification(false);
+        OneSignal.enableInAppAlertNotification(true);
         OneSignal.enableNotificationsWhenActive(false);
 
 
-        Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-                .applicationId("moizqureshipushtest")
-                .server("http://pushtest126.herokuapp.com/parse/")
-                .clientKey("qureshi1990")
-                .build()
-        );
+//        Parse.initialize(new Parse.Configuration.Builder(this)
+//                .applicationId("moizqureshipushtest")
+//                .server("http://pushtest126.herokuapp.com/parse/")
+//                .clientKey("qureshi1990")
+//                .build()
+//        );
 
         setEmailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
