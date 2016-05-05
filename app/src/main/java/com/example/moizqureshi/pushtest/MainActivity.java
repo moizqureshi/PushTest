@@ -136,7 +136,7 @@ public class MainActivity extends Activity {
     private void alertDialog(boolean success) {
         if(!success){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Sorry");
+            builder.setTitle("LOL U FAILED!");
             builder.setMessage("Could not find your partner: " + partnerEmail);
             builder.setCancelable(true);
             builder.show();
